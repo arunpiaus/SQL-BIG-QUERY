@@ -1,0 +1,129 @@
+#COMMAND 1
+1.	SELECT country_name, AVG(value) AS average FROM `bigquery-public-data.world_bank_intl_education.international_education`WHERE indicator_code = "SE.XPD.TOTL.GB.ZS" GROUP BY country_name
+#OUTPUT 1
+Row	country_name	average
+		
+1	Cyprus	15.70068613688151
+2	Seychelles	15.093194348471515
+3	Zimbabwe	24.14701962471009
+4	Lao PDR	12.029370103563592
+5	Ireland	12.440291255712498
+
+#COMMAND 2
+2.	SELECT AVG(value) AS average FROM `bigquery-public-data.world_bank_intl_education.international_education`
+#OUTPUT2
+Row  average 
+
+1       .2278760882107992E10
+
+#COMMAND 3
+3.	SELECT * FROM `bigquery-public-data.world_bank_intl_education.international_education`
+
+#OUTPUT 3
+Row	country_name	country_code	indicator_name	indicator_code	year	value
+1	Angola	AGO	GDP per capita, PPP (constant 2011 international $)	NY.GDP.PCAP.PP.KD	1992	3793.64554016524
+2	Turkey	TUR	Population, ages 7-12, total	SP.POP.0712.TO.UN	2000	8194184.0
+3	Burkina Faso	BFA	Africa Dataset: Average number of pupils per reading textbook in Grade 3 of primary education (number)	UIS.AFR.PBR.1.G3.PU.READ	2010	0.621410012245178
+4	Chile	CHL	Adjusted net intake rate to Grade 1 of primary education, male (%)	UIS.NIRA.1.M	2010	81.8738327026367
+5	Sub-Saharan Africa	SSF	Percentage of students in upper secondary general education who are female (%)	UIS.FEP.3.GPV	2010	44.7525901794434
+6	Mexico	MEX	School life expectancy, primary, gender parity index (GPI)	UIS.SLE.1.GPI	2002	0.985620021820068
+7	Lithuania	LTU	Barro-Lee: Percentage of female population age 50-54 with no education	BAR.NOED.5054.FE.ZS	2005	0.3
+8	Slovak Republic	SVK	Population, age 5, male	SP.POP.AG05.MA.UN	2001	32757.0
+9	Mauritius	MUS	Gross enrolment ratio, secondary, female (%)	SE.SEC.ENRR.FE	2003	84.1527404785156
+10	Uganda	UGA	Population, age 19, female	SP.POP.AG19.FE.UN	2009	344307.0
+
+#COMMAND 4
+4.	SELECT * FROM `bigquery-public-data.world_bank_intl_education.international_education`   ORDER BY year
+#OUTPUT 4
+Row	country_name	country_code	indicator_name	indicator_code	year	value	
+1	France	FRA	Barro-Lee: Population in thousands, age 25+, female	BAR.POP.25UP.FE	1970	15735.0	
+2	Peru	PER	Barro-Lee: Percentage of female population age 20-24 with tertiary schooling. Completed Tertiary	BAR.TER.CMPT.2024.FE.ZS	1970	3.61	
+3	Finland	FIN	Barro-Lee: Percentage of population age 45-49 with secondary schooling. Completed Secondary	BAR.SEC.CMPT.4549.ZS	1970	4.9	
+
+#COMMAND 5
+5.	SELECT COUNTRY_NAME FROM `bigquery-public-data.world_bank_intl_education.international_education` ORDER BY year
+#OUTPUT 5
+Row	COUNTRY_NAME
+1	Russian Federation
+2	Cyprus
+3	Morocco
+4	East Asia & Pacific
+5	Pakistan
+6	South Africa
+7	Qatar
+8	Croatia
+9	Finland
+10	Swaziland
+11	Chile
+
+#COMMAND 6
+6.	SELECT country_name, AVG(value) AS average FROM  `bigquery-public data.world_bank_intl_education.international_education` GROUP BY  country_name
+#OUTPUT 6
+Row	country_name	average
+1	Angola	9.680362826959362E8
+2	Turkey	4.1619149880309334E9
+3	Burkina Faso	6.316696402955396E7
+4	Chile	1.1113969587255843E9
+5	Sub-Saharan Africa	2.1713284699715935E10
+
+#COMMAND 7
+7.	SELECT * FROM `bigquery-public-data.world_bank_intl_education.international_education` ORDER BY year
+#OUTPUT 7
+Row	country_name	country_code	indicator_name	indicator_code	year	value
+1	Ukraine	UKR	Barro-Lee: Average years of secondary schooling, age 45-49, female	BAR.SEC.SCHL.4549.FE	1970	2.22
+2	Uruguay	URY	Barro-Lee: Percentage of population age 20-24 with tertiary schooling. Completed Tertiary	BAR.TER.CMPT.2024.ZS	1970	0.93
+
+#COMMAND 8
+8.	SELECT COUNTRY_NAME AVG FROM `bigquery-public-data.world_bank_intl_education.international_education` ORDER BY country_name
+#OUTPUT 8
+Row	AVG
+1	Afghanistan
+2	Afghanistan
+3	Afghanistan
+4	Afghanistan
+5	Afghanistan
+6	Afghanistan
+7	Afghanistan
+8	Afghanistan
+9	Afghanistan
+
+#COMMAND 9
+9.	SELECT COUNTRY_NAME AVG FROM `bigquery-public-data.world_bank_intl_education.international_education` ORDER BY country_name DESC
+#OUTPUT 9
+Row	AVG
+1	Zimbabwe
+2	Zimbabwe
+3	Zimbabwe
+4	Zimbabwe
+5	Zimbabwe
+6	Zimbabwe
+7	Zimbabwe
+8	Zimbabwe
+9	Zimbabwe
+10	Zimbabwe
+
+#COMMAND 10
+10.	SELECT COUNTRY_NAME MAX FROM `bigquery-public-data.world_bank_intl_education.international_education` ORDER BY value
+#OUTPUT 10
+Row	MAX
+1	China
+2	China
+3	China
+4	China
+5	China
+6	China
+7	China
+8	China
+9	India
+10	India
+11	India
+12	India
+13	India
+14	India
+15	India
+16	Korea, Rep.
+17	Korea, Rep.
+18	Korea, Rep.
+19	Korea, Rep.
+20	Korea, Rep.
+
